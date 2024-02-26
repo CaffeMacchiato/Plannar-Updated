@@ -9,10 +9,14 @@
   flex-direction: row;
   justify-content: flex-start;
   background-color: red;
+  width: 50%;
+  height: 10%;
 }
 
 .nav-bar-right {
   flex-direction: row;
   justify-content: flex-end;
   background-color: green;
+  width: 50%;
+  height: 10%;
 }
