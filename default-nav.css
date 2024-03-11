@@ -1,0 +1,75 @@
+.nav-bar {
+    user-select: none;
+    padding-top: 10px;
+    display: flex;
+    width: 95%;
+    height: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  
+.nav-bar-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 25%;
+    height: 10%;
+    justify-content: space-evenly;
+}
+  
+.nav-bar-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 21%;
+    height: 10%;
+    justify-content: space-between;
+}
+  
+#nav-sign-in-button {
+    background-color: white;
+    border-radius: 50pt;
+    border: 2px solid #21AD51;
+    color: #21AD51;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+    width: 150px;
+    height: 40px;
+}
+  
+#nav-sign-in-button:hover {
+    background-color: #21AD51;
+    border-radius: 50pt;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+    width: 150px;
+    height: 40px;
+}
+  
+#nav-sign-up-button {
+    background-color: #21AD51;
+    border-radius: 50pt;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+    width: 150px;
+    height: 40px;
+}
+  
+#nav-sign-up-button:hover {
+    background-color: white;
+    border-radius: 50pt;
+    border: 2px solid #21AD51;
+    color: #21AD51;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 12pt;
+    width: 150px;
+    height: 40px;
+}
