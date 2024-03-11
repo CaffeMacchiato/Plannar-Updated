@@ -2,8 +2,9 @@
 
 <html>
   <head>
-    <title>Plannar | Home</title>
+    <title>Plannar | Sign in</title>
     <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
 
   <body>
@@ -14,11 +15,27 @@
         <button>Contact</button>
       </div>
       <div class="nav-bar-right">
-        <button>Sign In</button>
-        <button>Sign Up</button>
+        <button id="sign-in-button">Sign in</button>
+        <button id="sign-up-button">Sign up</button>
       </div>
     </div>
 
-    <h1>Welcome to Plannar 1</h1>
+    <div class="body-wrapper">
+      <div class="left-body">
+        <h1 id="plannar">Plannar</h1>
+        <h2 id="slogan">Connect and stay organized</h2>
+      </div>
+
+      <div class="right-body">
+        <div class="sign-in-box">
+          <h1 id="sign-in-text">Sign in</h1>
+          <input class="input-field" type="email" placeholder="Email">
+          <input class="input-field" type="password" placeholder="Password">
+          <a href="https://example.com">Forgot password?</a>
+          <button>Sign in</button>
+        </div>
+      </div>
+    </div>
+    
   </body>
 </html>

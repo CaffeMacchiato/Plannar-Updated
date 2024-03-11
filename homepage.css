@@ -1,25 +1,142 @@
 .nav-bar {
+  padding-top: 10px;
   display: flex;
-  background-color: black;
-  width: 100%;
+  width: 95%;
   height: 10%;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .nav-bar-left {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: red;
-  width: 50%;
+  width: 25%;
   height: 10%;
+  justify-content: space-evenly;
 }
 
 .nav-bar-right {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  background-color: green;
-  width: 50%;
+  width: 18%;
   height: 10%;
+  justify-content: space-between;
+}
+
+#sign-in-button {
+  background-color: white;
+  border-radius: 50pt;
+  border: 2px solid #21AD51;
+  color: #21AD51;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  width: 150px;
+  height: 40px;
+}
+
+#sign-in-button:hover {
+  background-color: #21AD51;
+  border-radius: 50pt;
+  border: 1px solid white;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  width: 150px;
+  height: 40px;
+}
+
+#sign-up-button {
+  background-color: #21AD51;
+  border-radius: 50pt;
+  border: 2px solid white;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  width: 150px;
+  height: 40px;
+}
+
+#sign-up-button:hover {
+  background-color: white;
+  border-radius: 50pt;
+  border: 2px solid #21AD51;
+  color: #21AD51;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12pt;
+  width: 150px;
+  height: 40px;
+}
+
+
+.body-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.left-body {
+  display: flex;
+  padding-top: 10%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#plannar {
+  color: #21AD51;
+  font-family: 'Josefins Sans', sans-serif;
+  font-weight: 700;
+  font-size: 50pt;
+  margin: 0
+}
+
+#slogan {
+  font-family: 'Inter', sans-serif;
+}
+
+.right-body {
+  padding-top: 5%;
+}
+
+.sign-in-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid grey;
+  height: 400px;
+  width: 550px;
+  border-radius: 20pt;
+}
+
+
+#sign-in-text {
+  padding-top: 20px;
+  padding-left: 50px;
+  font-family: 'Inter', sans-serif;
+}
+
+.input-field {
+  height: 50px;
+  width: 80%;
+  border-radius: 10pt;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.input-field::placeholder {
+  padding-left: 20px;
+}
+
+.sign-in-box button {
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 80%;
 }
