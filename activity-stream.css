@@ -1,0 +1,60 @@
+/* top navigation bar */
+.topnav {
+  background-color: rgb(210, 36, 36);
+  color: black;
+  text-align: center;
+  padding: 14px;
+}
+
+/* sidebar (empty for now) */
+/*.sidebar {
+  need to include styling here!!
+} */
+
+/* affects the entire page content */
+.main-content {
+  margin-left: calc(20% + 50px); /* 20% of the page width to account for the missing sidebar + 50px */
+  padding: 20px;
+}
+
+/* pagename bar */
+.pagename {
+  padding: 14px 16px;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* pagename header */
+.pagename h2 {
+  color: black;
+  padding: 14px 16px;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* assignment boxes */
+.assign-box {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: calc(50% + 50px); /* 20% of the page width to account for the missing sidebar + 50px */
+}
+
+/* change the spacing between the text in the assignment boxes */
+.assign-box p {
+  line-height: 1.2;
+}
+
+/* hw boxes */
+.homework-box {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.homework-box p {
+  line-height: 1.2;
+}
+
+/* text color */
+.due-date {
+  color: rgb(22, 201, 22);
+}
