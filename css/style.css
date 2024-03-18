@@ -1,0 +1,123 @@
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    height: 900px;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #21AD51;
+    width: 20%;
+    height: 100%;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: flex-start;
+    border-radius: 0pt 0pt 20pt 0pt;
+    height: 7%;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+.menu-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sidebar{
+    height:60px;
+    width: 100%;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    height: 40px;
+}
+.navbar{
+    background-color:#21AD51;  
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+    height: 50px;
+    text-align: center;
+}
+.navbar ul{
+    list-style: none;
+}
+.navbar li{
+    display: inline;
+}
+.navbar button{
+    margin: 15px;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    padding-right: 30px;
+    margin:  8px;
+}
+main{
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: right;
+}
+.calculator, .desired-gpa, .progress-chart, .current-classes {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #6ed56e;
+    box-shadow: 4px 3px  black;
+}
+.desired-content{
+    display: flex;
+    justify-content: space-between; 
+}
+#grades-list label{
+    padding-right: 120px;
+}
+.add-grade{
+    outline: none;
+}
+.popup{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    background-color: #6ed56e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Set a fixed width for the popup */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+.popup label{
+    display: inline;
+}
+.current-classes table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .current-classes th, .current-classes td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
