@@ -8,28 +8,61 @@
 
     <body>
         <div class="wrapper">
+            <!--Sidebar menu section-->
             <div class="menu">
                 <div class="menu-header">
-                    <button>Close</button>
-                    <button>Home</button>
+                    <div class="menu-header-button">
+                        <a href="dashboard.html"><img src="menu_open.png" alt="Close"></a>
+                    </div>
+                    <div class="menu-header-button" id="menu-header-home-button">
+                        <a href="dashboard.html"><img src="logo.png" alt="Home"></a>
+                    </div>                    
                 </div>
 
                 <div class="menu-body">
-                    <a href="dashboard.html"><button>Dashboard</button></a>
-                    <a href="dashboard.html"><button>Calendar</button></a>
-                    <a href="dashboard.html"><button>Assignment</button></a>
-                    <a href="dashboard.html"><button>Performance</button></a>
+                    <a href="dashboard.html"><button class="menu-button-active">
+                        <div class="menu-button-wrapper">
+                            <img src="dashboard-active-icon.png" alt="Dashboard" class="menu-icon">
+                            <p class="menu-text">Dashboard</p>                            
+                        </div>
+                    </button></a>
+                    <a href="calendar.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="calendar-icon.png" alt="Calendar" class="menu-icon">
+                            <p class="menu-text">Calendar</p>                            
+                        </div>
+                    </button></a>
+                    <a href="assignment.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="assignment-icon.png" alt="Assignment" class="menu-icon">
+                            <p class="menu-text">Assignment</p>                            
+                        </div>
+                    </button></a>
+                    <a href="performance.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="performance-icon.png" alt="Performance" class="menu-icon">
+                            <p class="menu-text">Performance</p>                            
+                        </div>
+                    </button></a>
                 </div>
 
                 <div class="menu-footer">
-                    <button>Logout</button>
-                    <button>Support</button>
-                    <button>Settings</button>
+                    <a href="index.html"><img src="logout-icon.png" alt="Logout"></a>
+                    <a href="index.html"><img src="help-icon.png" alt="Help"></a>
+                    <a href="index.html"><img src="settings-icon.png" alt="Settings"></a>
                 </div>
                 
 
             </div>
+            <!--Sidebar menu section-->
 
+            <!--Your content in this div-->
+            <div class="dashboard">
+                <h1>Start here</h1>
+            </div>
         </div>
+        
+
+        
     </body>
 </html>
