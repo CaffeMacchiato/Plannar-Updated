@@ -1,47 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Activity Stream</title>
-    <link rel="stylesheet" href="activity-stream.css">
-</head>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="activity-stream.css">
+    </head>
 
-<body>
+    <body>
+        <div class="wrapper">
+            <!--Sidebar menu section-->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-header-button">
+                        <a href="dashboard.html"><img src="menu_open.png" alt="Close"></a>
+                    </div>
+                    <div class="menu-header-button" id="menu-header-home-button">
+                        <a href="dashboard.html"><img src="logo.png" alt="Home"></a>
+                    </div>                    
+                </div>
 
-  <div class="topnav">
-    <h1>Activity Stream</h1>
-  </div>
-    
-  <div class="sidebar">
-      <!--need to fill this out-->
-  </div>
-  
-  <div class="main-content">
+                <div class="menu-body">
+                    <a href="dashboard.html"><button class="menu-button-active">
+                        <div class="menu-button-wrapper">
+                            <img src="dashboard-active-icon.png" alt="Dashboard" class="menu-icon">
+                            <p class="menu-text">Dashboard</p>                            
+                        </div>
+                    </button></a>
+                    <a href="calendar.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="calendar-icon.png" alt="Calendar" class="menu-icon">
+                            <p class="menu-text">Calendar</p>                            
+                        </div>
+                    </button></a>
+                    <a href="assignment.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="assignment-icon.png" alt="Assignment" class="menu-icon">
+                            <p class="menu-text">Assignment</p>                            
+                        </div>
+                    </button></a>
+                    <a href="performance.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="performance-icon.png" alt="Performance" class="menu-icon">
+                            <p class="menu-text">Performance</p>                            
+                        </div>
+                    </button></a>
+                </div>
 
-    <div class="pagename">
-        <h2>Upcoming Assignments</h2>
-    </div>
+                <div class="menu-footer">
+                    <a href="index.html"><img src="logout-icon.png" alt="Logout"></a>
+                    <a href="index.html"><img src="help-icon.png" alt="Help"></a>
+                    <a href="index.html"><img src="settings-icon.png" alt="Settings"></a>
+                </div>
 
-    <div class="homework-box">
-        <strong>COMP 4620 P 1 201 GUI Programming II 2024 Spring</strong>
-        <p>Due: HW3 - Prototype</p>
-        <p class="due-date">Due Date: 2/20/24, 11:59 PM</p>
-    </div>
 
-    <div class="homework-box">
-        <strong>COMP 4120 P 1 201 Software Engineering II 2024 Spring</strong>
-        <p>Due: Project Architecture</p>
-        <p class="due-date">Due Date: 2/21/24, 11:59 PM</p>
-    </div>
+            </div>
+            <!--Sidebar menu section-->
 
-    <div class="homework-box">
-        <strong>COMP 4620 P 1 201 GUI Programming II 2024 Spring</strong>
-        <p>Due: HW4 - HE</p>
-        <p class="due-date">Due Date: 2/26/24, 11:59 PM</p>
-    </div>
+            <!-- Your content in this div -->
+            <div class="dashboard">
+                <h1>Activity Stream</h1>
+                <div class="upcoming">Upcoming Assignments</div>
 
-</div>
+                <!-- homework boxes -->
+                <div class="homework-box">
+                    <p>COMP 4620 P 1 201 GUI Programming II 2024 Spring</p>
+                    <p>Due: HW3 - Prototype</p>
+                    <p class="due-date">Due Date: 2/20/24, 11:59 PM</p>
+                </div>
 
-</body>
+                <div class="homework-box">
+                    <p>COMP 4120 P 1 201 Software Engineering II 2024 Spring</p>
+                    <p>Due: Project Architecture</p>
+                    <p class="due-date">Due Date: 2/21/24, 11:59 PM</p>
+                </div>
+
+                <div class="homework-box">
+                    <p>COMP 4620 P 1 201 GUI Programming II 2024 Spring</p>
+                    <p>Due: HW4 - HE</p>
+                    <p class="due-date">Due Date: 2/26/24, 11:59 PM</p>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </body>
 </html>
