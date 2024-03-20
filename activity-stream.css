@@ -1,60 +1,139 @@
-/* top navigation bar */
-.topnav {
-  background-color: rgb(210, 36, 36);
-  color: black;
-  text-align: center;
-  padding: 14px;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-/* sidebar (empty for now) */
-/*.sidebar {
-  need to include styling here!!
-} */
-
-/* affects the entire page content */
-.main-content {
-  margin-left: calc(20% + 50px); /* 20% of the page width to account for the missing sidebar + 50px */
-  padding: 20px;
+.wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
-/* pagename bar */
-.pagename {
-  padding: 14px 16px;
-  font-size: 24px;
-  margin: 0;
+.menu {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #21AD51;
+    width: 15%;
+    height: 100%;
 }
 
-/* pagename header */
-.pagename h2 {
-  color: black;
-  padding: 14px 16px;
-  font-size: 24px;
-  margin: 0;
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: flex-start;
+    border-radius: 0pt 0pt 20pt 0pt;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 7%;
 }
 
-/* assignment boxes */
-.assign-box {
-  margin-top: 20px;
-  margin-bottom: 30px;
-  margin-left: calc(50% + 50px); /* 20% of the page width to account for the missing sidebar + 50px */
+.menu-header-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 30px;
 }
 
-/* change the spacing between the text in the assignment boxes */
-.assign-box p {
-  line-height: 1.2;
+#menu-header-home-button {
+    padding-left: 50px;
 }
 
-/* hw boxes */
+
+.menu-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20%;
+    padding-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 20px;
+    width: auto;
+}
+
+.menu-icon {
+    margin-left: 10%;
+}
+
+.menu-text {
+    margin-top: 3px;
+    margin-left: 12%;
+}
+
+.menu-button {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50pt;
+    color: white;
+    background-color: #21AD51;
+    font-family: 'Inter', sans-serif;
+    font-weight: 555;
+    font-size: 12pt;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: 200px;
+}
+
+.menu-button-active {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50pt;
+    color: #21AD51;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 555;
+    font-size: 12pt;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: 200px;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
+/* MY CONTENT STARTS HERE */
+
+.dashboard {
+    padding-left: 5%; 
+    width: 100%;
+}
+
+.dashboard h1 {
+    font-weight: bold; 
+}
+
+.upcoming {
+    font-size: 35px;
+    font-weight: bold; 
+}
+
 .homework-box {
-  margin-top: 20px;
-  margin-bottom: 30px;
+    margin-top: 5%; 
+    margin-bottom: 5%; 
 }
 
-.homework-box p {
-  line-height: 1.2;
+.homework-box p:first-child {
+    font-weight: bold;
 }
 
-/* text color */
-.due-date {
-  color: rgb(22, 201, 22);
+.homework-box .due-date {
+    color: green; 
 }
