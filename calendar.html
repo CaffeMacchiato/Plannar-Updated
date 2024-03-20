@@ -1,61 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Calendar</title>
-    <link rel="stylesheet" href="calendar.css">
-</head>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="calendar.css">
+        <script src="createnewtask.js"></script>
+    </head>
 
-<body>
-    <div class="topnav">
-        <h1>Calendar</h1>
-    </div>
+    <body>
+        <div class="wrapper">
+            <!--Sidebar menu section-->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-header-button">
+                        <a href="dashboard.html"><img src="menu_open.png" alt="Close"></a>
+                    </div>
+                    <div class="menu-header-button" id="menu-header-home-button">
+                        <a href="dashboard.html"><img src="logo.png" alt="Home"></a>
+                    </div>                    
+                </div>
 
-    <div class="sidebar">
-        <!--need to fill this out-->
-    </div>
+                <div class="menu-body">
+                    <a href="dashboard.html"><button class="menu-button-active">
+                        <div class="menu-button-wrapper">
+                            <img src="dashboard-active-icon.png" alt="Dashboard" class="menu-icon">
+                            <p class="menu-text">Dashboard</p>                            
+                        </div>
+                    </button></a>
+                    <a href="calendar.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="calendar-icon.png" alt="Calendar" class="menu-icon">
+                            <p class="menu-text">Calendar</p>                            
+                        </div>
+                    </button></a>
+                    <a href="assignment.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="assignment-icon.png" alt="Assignment" class="menu-icon">
+                            <p class="menu-text">Assignment</p>                            
+                        </div>
+                    </button></a>
+                    <a href="performance.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="performance-icon.png" alt="Performance" class="menu-icon">
+                            <p class="menu-text">Performance</p>                            
+                        </div>
+                    </button></a>
+                </div>
 
-    <div class="main-content">
+                <div class="menu-footer">
+                    <a href="index.html"><img src="logout-icon.png" alt="Logout"></a>
+                    <a href="index.html"><img src="help-icon.png" alt="Help"></a>
+                    <a href="index.html"><img src="settings-icon.png" alt="Settings"></a>
+                </div>
+                
 
-        <!-- has green background -->
-        <div class="pagename">
-            <h2>Today</h2>
+            </div>
+            <!--Sidebar menu section-->
+
+            <!-- Your content in this div -->
+            <div class="dashboard">
+                <h1>Calendar</h1>
+
+                <!-- has green background -->
+                <div class="bar pagename">
+                    <h2>Today</h2>
+                </div> 
+
+                <!-- timeline bar -->
+                <div class="bar timeline">
+                    <h2>2024</h2>
+                    <h2>Spring Sem</h2>
+                    <h2>Feb</h2>
+                </div>
+
+                <!-- dates bar -->
+                <div class="bar dates">
+                    <h2>February, Spring 2024</h2>
+                    <h2>Tuesday, 20th</h2>
+                </div>
+                
+                <div class="content-container">
+                    <!-- using a picture of my calendar mockup from our Figma prototype
+                         in place of a functional calendar -->
+                    <div class="picture">
+                        <img src="calendar.png" alt="Calendar Picture">
+                    </div>
+                
+                    <!-- assignment boxes -->
+                    <div class="assign-boxes">
+                        <div class="task-box">
+                            <p>Study for Physics Exam</p>
+                            <p class="timeslot">8:30am - 10:30am</p>
+                        </div>
+
+                        <div class="task-box">
+                            <p>Finish Linear Algebra HW #5</p>
+                            <p class="timeslot">12:45pm - 2:00pm</p>
+                        </div>
+
+                        <div class="task-box">
+                            <strong>Draft Software Eng. Project Proposal</strong>
+                            <p class="timeslot">4:00pm - 6:15pm</p>
+                        </div>
+
+                        <!-- "Create New Task" button -->
+                        <div id="create-task-button" class="task-box" style="cursor: pointer;">
+                            <p style="text-align: center;">Create New Task</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-
-        <!-- timeline bar -->
-        <div class="timeline">
-            <h2>2024</h2>
-            <h2>Spring Sem</h2>
-            <h2>Feb</h2>
-        </div>
-
-        <!-- dates bar -->
-        <div class="dates">
-            <h2>February, Spring 2024</h2>
-            <h2>Tuesday, 20th</h2>
-        </div>
-
-        <!-- calendar picture as a placeholder for an actual functional calendar -->
-        <div class="calendarpicture">
-            <img src="calendar.png" alt="Calendar picture" style="width: 300px; height: auto;">
-        </div>
-
-        <div class="assign-box">
-            <strong>Study for Physics Exam</strong>
-            <p class="timeslot">Due Date: 2/20/24, 11:59 PM</p>
-        </div>
-
-        <div class="assign-box">
-            <strong>Finish Linear Algebra HW #5</strong>
-            <p class="timeslot">Due Date: 2/21/24, 11:59 PM</p>
-        </div>
-
-        <div class="assign-box">
-            <strong>Draft Software Eng. Project Proposal</strong>
-            <p class="timeslot">Due Date: 2/26/24, 11:59 PM</p>
-        </div>
-    </div>
-</body>
-
+        
+    </body>
 </html>
