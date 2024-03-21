@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Performance Tracker</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="dashboard-menu.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!--Sidebar menu section-->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-header-button">
+                        <a href="dashboard.html"><img src="menu_open.png" alt="Close"></a>
+                    </div>
+                    <div class="menu-header-button" id="menu-header-home-button">
+                        <a href="dashboard.html"><img src="logo.png" alt="Home"></a>
+                    </div>                    
+                </div>
+
+                <div class="menu-body">
+                    <a href="dashboard.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="dashboard-icon.png" alt="Dashboard" class="menu-icon">
+                            <p class="menu-text">Dashboard</p>                            
+                        </div>
+                    </button></a>
+                    <a href="calendar.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="calendar-icon.png" alt="Calendar" class="menu-icon">
+                            <p class="menu-text">Calendar</p>                            
+                        </div>
+                    </button></a>
+                    <a href="assignment.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="assignment-icon.png" alt="Assignment" class="menu-icon">
+                            <p class="menu-text">Assignment</p>                            
+                        </div>
+                    </button></a>
+                    <a href="performance-grade.html"><button class="menu-button-active">
+                        <div class="menu-button-wrapper">
+                            <img src="performance-active-icon.png" alt="Performance" class="menu-icon">
+                            <p class="menu-text">Performance</p>                            
+                        </div>
+                    </button></a>
+                </div>
+
+                <div class="menu-footer">
+                    <a href="index.html"><img src="logout-icon.png" alt="Logout"></a>
+                    <a href="index.html"><img src="help-icon.png" alt="Help"></a>
+                    <a href="index.html"><img src="settings-icon.png" alt="Settings"></a>
+                </div>
+                
+
+            </div>
+            <!--Sidebar menu section-->
+
+            <div class="sidebar">
+                <div class="content">
+                    <h1>Performance Tracker</h1>
+                    <button> user</button>  
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href = "performance-grade.html"><button>Grade Tracker</button></a></li>
+                        <li><a href = "performance-gpa.html"><button>GPA Tracker</button></a></li>
+                        <li><a href = "performance-completed.html"><button>Completed Work</button></a></li>
+                        <li><a href = "performance-pending.html"><button>Pending Work</button></a></li>
+                        <li><a href = "performance-missing.html"><button>Missing Work</button></a></li>
+                        
+                    </ul>
+               
+                </nav>
+                <main>   
+                    <section class="desired-gpa">
+                            
+                    </section>
+                    <section class="progress-chart">
+                        
+                    </section>
+                    <section class="current-classes">
+                            
+                    </section>
+                    <section class="calculator">
+
+                    </section>
+                </main>
+            </div>
+            
+        </div>
+
+    
+        <script src="js/performanace.js"></script>
+
+    </body>
+</html>

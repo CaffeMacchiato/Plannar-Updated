@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Performance Tracker</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="dashboard-menu.css">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!--Sidebar menu section-->
+            <div class="menu">
+                <div class="menu-header">
+                    <div class="menu-header-button">
+                        <a href="dashboard.html"><img src="menu_open.png" alt="Close"></a>
+                    </div>
+                    <div class="menu-header-button" id="menu-header-home-button">
+                        <a href="dashboard.html"><img src="logo.png" alt="Home"></a>
+                    </div>                    
+                </div>
+
+                <div class="menu-body">
+                    <a href="dashboard.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="dashboard-icon.png" alt="Dashboard" class="menu-icon">
+                            <p class="menu-text">Dashboard</p>                            
+                        </div>
+                    </button></a>
+                    <a href="calendar.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="calendar-icon.png" alt="Calendar" class="menu-icon">
+                            <p class="menu-text">Calendar</p>                            
+                        </div>
+                    </button></a>
+                    <a href="assignment.html"><button class="menu-button">
+                        <div class="menu-button-wrapper">
+                            <img src="assignment-icon.png" alt="Assignment" class="menu-icon">
+                            <p class="menu-text">Assignment</p>                            
+                        </div>
+                    </button></a>
+                    <a href="performance-grade.html"><button class="menu-button-active">
+                        <div class="menu-button-wrapper">
+                            <img src="performance-active-icon.png" alt="Performance" class="menu-icon">
+                            <p class="menu-text">Performance</p>                            
+                        </div>
+                    </button></a>
+                </div>
+
+                <div class="menu-footer">
+                    <a href="index.html"><img src="logout-icon.png" alt="Logout"></a>
+                    <a href="index.html"><img src="help-icon.png" alt="Help"></a>
+                    <a href="index.html"><img src="settings-icon.png" alt="Settings"></a>
+                </div>
+                
+
+            </div>
+            <!--Sidebar menu section-->
+
+            <div class="sidebar">
+                <div class="content">
+                    <h1>Performance Tracker</h1>
+                    <button> user</button>  
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href = "performance-grade.html"><button>Grade Tracker</button></a></li>
+                        <li><a href = "performance-gpa.html"><button>GPA Tracker</button></a></li>
+                        <li><a href = "performance-completed.html"><button>Completed Work</button></a></li>
+                        <li><a href = "performance-pending.html"><button>Pending Work</button></a></li>
+                        <li><a href = "performance-missing.html"><button>Missing Work</button></a></li>
+                        
+                    </ul>
+               
+                </nav>
+                <main>   
+                    <section class="desired-gpa">
+                            <h2>Desired Grade</h2>
+                            <div class="desired-content">
+                                <div id="grades-list">
+                                    <label for="semester">Semester</label>  
+                                    <label for="year">Year</label>
+                                    <label for="end-goal">End Goal</label>
+                                    <label for="Accomplishment">Accomplishment</label>
+                                </div>
+                                <button onclick="openPopup()">Add here</button>
+                            </div>
+                            <div class="popup" id ="popup">
+                                <form id="popup-content">
+                                  <label for="classname">Class:</label>
+                                  <input type="text" id="classname" name="classname" required>
+                                  
+                                  <label for="year">Year:</label>
+                                  <input type="number" id="year" name="year" required>
+                                  
+                                  <label for="endgoal">End Goal:</label>
+                                  <input type="text" id="endgoal" name="endgoal" required>
+                                  
+                                  <button id="popup-add" type="submit">Submit</button>
+                                  <button  id="cancel" onclick="closePopup()" >Cancel</button>
+                                </form>
+                    </section>
+                    <section class="progress-chart">
+                        <h2>Progress</h2>
+                        <div id="progress-chart"><!-- Chart container --></div>              
+                    </section>
+                    <section class="current-classes">
+                            <h2>Current Classes</h2>
+                            <table>
+                              <!-- Table headers -->
+                              <tr>
+                                <th>Class Name</th>
+                                <th>Credits</th>
+                                <th>Grade</th>
+                              </tr>
+        
+                              <!-- Dynamic rows to be filled with class data -->
+                            </table>                
+                    </section>
+                    <section class="calculator">
+                        <h2>Grade Calculator</h2>
+                        <form id="gpa-form">
+                          <div id="class-inputs-container">
+                            <!-- Class inputs will be dynamically added here -->
+                          </div>
+                          <div class="totalClassesInput">
+                            <label for="totalClasses">Total Number of Classes:</label>
+                            <input type="number" id="totalClasses" min="1" step="1" placeholder="e.g., 5" required oninput="updateAddClassButton()">
+                            
+                          </div>
+                          <div class="classInput">
+                           
+                          </div>
+                          <button type="button" id="addClass" onclick="addClassInput()"disabled>Add Class</button> <br>
+                          
+                          <label for="past-gpa">Past Cumulative GPA:</label>
+                          <input type="number" id="past-gpa" step="0.01" min="0" max="" placeholder="e.g., 3.5">
+        
+                          <button id="calculate" type="submit" onclick="calculateGPA()">Calculate my GPA</button>
+                        </form>
+                        <div id="gpa-results">
+                          <p>Semester GPA: <span id="semester-gpa">-</span></p>
+                          <p>Predicted Cumulative GPA: <span id="predictedgpa">-</span></p>
+                        </div>
+                    </section>
+                </main>
+            </div>
+            
+        </div>
+
+    
+        <script src="js/performanace.js"></script>
+
+    </body>
+</html>

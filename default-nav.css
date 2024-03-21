@@ -20,8 +20,8 @@
 .nav-bar-right {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 21%;
+    justify-content: space-evenly;
+    width: 17%;
     height: 10%;
     justify-content: space-between;
 }

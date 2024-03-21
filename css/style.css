@@ -1,44 +1,4 @@
-.wrapper {
-    margin: 0;
-    padding: 0;
-    display:flex;
-    height: 900px;
-}
 
-.menu {
-    margin: 0;
-    padding: 0;
-    user-select: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #21AD51;
-    width: 20%;
-    height: 100%;
-}
-
-.menu-header {
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    justify-content: flex-start;
-    border-radius: 0pt 0pt 20pt 0pt;
-    height: 7%;
-    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-
-.menu-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.menu-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .sidebar{
     height:60px;
     width: 100%;
