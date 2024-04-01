@@ -21,7 +21,7 @@ html, body {
     justify-content: space-between;
     background-color: #21AD51;
     width: 15%;
-    height: 100%;
+    height: 100vh;
 }
 
 .menu-header {
@@ -31,17 +31,22 @@ html, body {
     justify-content: flex-start;
     border-radius: 0pt 0pt 20pt 0pt;
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    height: 7%;
+    height: 7vh;
 }
 
 .menu-header-button {
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 30px;
+    padding-left: 5%;
 }
 
-#menu-header-home-button {
-    padding-left: 50px;
+#home-button {
+    padding-left: 2.5vw;
+    height: 5vh;
+}
+
+#close-button {
+    height: 4vh;
 }
 
 
@@ -49,8 +54,8 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 20%;
-    padding-bottom: 300px;
+    height: 20vh;
+    padding-bottom: 20vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -59,7 +64,7 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    height: 20px;
+    height: 50%;
     width: auto;
 }
 
@@ -80,11 +85,12 @@ html, body {
     background-color: #21AD51;
     font-family: 'Inter', sans-serif;
     font-weight: 555;
-    font-size: 12pt;
+    font-size: 0.95vw;
+    line-height: 0.75;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
-    height: 40px;
-    width: 200px;
+    height: 4vh;
+    width: 10.5vw;
 }
 
 .menu-button-active {
@@ -95,16 +101,22 @@ html, body {
     background-color: white;
     font-family: 'Inter', sans-serif;
     font-weight: 555;
-    font-size: 12pt;
+    font-size: 0.95vw;
+    line-height: 0.75;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
-    height: 40px;
-    width: 200px;
+    height: 4vh;
+    width: 10.5vw;
 }
 
 .menu-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-bottom: 20px;
+    padding-bottom: 1vh;
+    height: 4vh;
+}
+
+.footer-button {
+    height: 3vh;
 }

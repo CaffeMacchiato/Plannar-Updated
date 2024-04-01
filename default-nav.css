@@ -34,22 +34,19 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 12pt;
-    width: 150px;
+    width: auto; /* Remove fixed width */
     height: 40px;
+    min-width: 150px; /* Set a minimum width */
+    padding: 0 20px; /* Add padding for better visual appearance */
 }
   
 #nav-sign-in-button:hover {
     background-color: #21AD51;
-    border-radius: 50pt;
+    border-radius: 50pt; 
     border: 1px solid white;
     color: white;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 12pt;
-    width: 150px;
-    height: 40px;
 }
-  
+
 #nav-sign-up-button {
     background-color: #21AD51;
     border-radius: 50pt;
@@ -58,8 +55,10 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 12pt;
-    width: 150px;
+    width: auto; /* Remove fixed width */
     height: 40px;
+    min-width: 150px; /* Set a minimum width */
+    padding: 0 20px; /* Add padding for better visual appearance */
 }
   
 #nav-sign-up-button:hover {
