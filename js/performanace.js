@@ -16,7 +16,8 @@ function closePopup() {
     // Create a new div to display the information
     var newEntry = document.createElement('div');
     newEntry.innerHTML = 
-    `<tr>
+    `<table>
+    <tr>
             <th>Semester:</th>
             <th>Year:</th>
             <th>End Goal:</th>
@@ -26,6 +27,7 @@ function closePopup() {
             <td>${year}</td>
             <td>${endGoal}</td>
     </tr>
+    </table>
     `;
   
     // Append the new entry to the desired-content div
