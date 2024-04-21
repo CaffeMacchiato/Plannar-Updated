@@ -1,7 +1,110 @@
-/* MY CONTENT STARTS HERE */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #21ad51;
+    width: 15%;
+    height: 100%;
+}
+
+.menu-header {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    justify-content: flex-start;
+    border-radius: 0pt 0pt 20pt 0pt;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    height: 7%;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+.menu-header-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 30px;
+}
+
+#menu-header-home-button {
+    padding-left: 50px;
+}
+
+.menu-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 20%;
+    padding-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 20px;
+    width: auto;
+}
+
+.menu-icon {
+    margin-left: 10%;
+}
+
+.menu-text {
+    margin-top: 3px;
+    margin-left: 12%;
+}
+
+.menu-button,
+.menu-button-active {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50pt;
+    color: white;
+    background-color: #21ad51;
+    font-family: "Inter", sans-serif;
+    font-weight: 555;
+    font-size: 12pt;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    width: 200px;
+}
+
+.menu-button-active {
+    color: #21ad51;
+    background-color: white;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+}
+
 .dashboard {
     padding-left: 0;
-    width: 85%;
+    width: 100%;
 }
 
 .dashboard h1 {
@@ -26,30 +129,6 @@
     background-color: #21ad51;
 }
 
-.dashboard > .task-box {
-    padding-left: 5%;
-}
-
-.task-box {
-    margin-bottom: 3%;
-    text-align: left; 
-    border: 2px solid black;
-    padding: 10px;
-}
-
-.task-box p {
-    margin: 5px 0; 
-    font-size: 18px; 
-}
-
-.task-box p:first-child {
-    font-weight: bold;
-}
-
-.task-box .due-date {
-    color: green;
-}
-
 .content-container {
     display: flex;
 }
@@ -57,10 +136,10 @@
 .picture,
 .assign-boxes {
     width: 50%;
-    padding: 2% 5% 5%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    padding: 2% 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .picture img,
@@ -72,28 +151,73 @@
 .assign-boxes {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 5%;
-    padding-right: 5%; 
+    padding-right: 5%;
 }
 
 /* this adds a 2px wide black border around every task box element */
 .task-box {
     border: 2px solid black;
     padding: 10px;
-    margin-bottom: 10px; 
-    width: 100%; 
-    font-size: 18px; 
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* this changes the text color for the timeslot class to gray */
 .timeslot {
     color: gray;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 /* this applies spacing between task boxes without having it double up anywhere or when new task boxes are added */
 .task-box + .task-box {
-    margin-top: 10px; 
+    margin-top: 10px;
+}
+
+/* this styles the "Edit" button inside each task box */
+.edit-button {
+    background-color: #21ad51;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.task-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.task-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* this adds a 10px right margin between the "timeslot" text and the "Edit" button */
+.timeslot {
+    margin-right: 10px;
+}
+
+#create-task-button {
+    background-color: #21ad51; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold; 
+    border-radius: 5px;
+    font-size: 14px;
 }
