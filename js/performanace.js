@@ -15,7 +15,18 @@ function closePopup() {
   
     // Create a new div to display the information
     var newEntry = document.createElement('div');
-    newEntry.innerHTML = `<strong>Semester:</strong> ${semester}, <strong>Year:</strong> ${year}, <strong>End Goal:</strong> ${endGoal}`;
+    newEntry.innerHTML = 
+    `<tr>
+            <th>Semester:</th>
+            <th>Year:</th>
+            <th>End Goal:</th>
+    </tr>
+    <tr>
+            <td> ${semester}</td>
+            <td>${year}</td>
+            <td>${endGoal}</td>
+    </tr>
+    `;
   
     // Append the new entry to the desired-content div
     document.getElementById('grade-entries').appendChild(newEntry);
