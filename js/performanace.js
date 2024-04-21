@@ -5,6 +5,25 @@ function openPopup() {
 function closePopup() {
     document.getElementById('popup').style.display = 'none';
 }
+  function saveFormData(event) {
+    event.preventDefault();  // Prevent the form from submitting normally
+  
+    // Get values from the form
+    var semester = document.getElementById('classname').value;
+    var year = document.getElementById('year').value;
+    var endGoal = document.getElementById('endgoal').value;
+  
+    // Create a new div to display the information
+    var newEntry = document.createElement('div');
+    newEntry.innerHTML = `<strong>Semester:</strong> ${semester}, <strong>Year:</strong> ${year}, <strong>End Goal:</strong> ${endGoal}`;
+  
+    // Append the new entry to the desired-content div
+    document.getElementById('grade-entries').appendChild(newEntry);
+  
+    // Close popup after saving data
+    closePopup();
+  }
+  
 function updateAddClassButton() {
     // Get the value from the totalClasses input field
     const totalClasses = document.getElementById('totalClasses').value;

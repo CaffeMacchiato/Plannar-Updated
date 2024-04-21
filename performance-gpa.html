@@ -78,29 +78,26 @@
                 <main>   
                     <section class="desired-gpa">
                             <h2>Desired GPA</h2>
-                            <div class="desired-content">
-                                <div id="grades-list">
-                                    <label for="semester">Semester</label>  
-                                    <label for="year">Year</label>
-                                    <label for="end-goal">End Goal</label>
-                                    <label for="Accomplishment">Accomplishment</label>
-                                </div>
+                            <div class="desired-content" id = "grade-entries">
+                                
+
+                            </div>
                                 <button onclick="openPopup()">Add here</button>
                             </div>
                             <div class="popup" id ="popup">
-                                <form id="popup-content">
-                                  <label for="classname">Semester:</label>
-                                  <input type="text" id="classname" name="classname" required><br>
-                                  
-                                  <label for="year">Year:</label>
-                                  <input type="number" id="year" name="year" required><br>
-                                  
-                                  <label for="endgoal">End Goal:</label>
-                                  <input type="text" id="endgoal" name="endgoal" required><br>
-                                  
-                                  <button id="popup-add" type="submit">Submit</button>
-                                  <button  id="cancel" onclick="closePopup()" >Cancel</button>
-                                </form>
+                                <form id="popup-content" onsubmit="saveFormData(event)">
+                                    <label for="classname">Semester:</label>
+                                    <input type="text" id="classname" name="classname" required><br>
+                                    
+                                    <label for="year">Year:</label>
+                                    <input type="number" id="year" name="year" required><br>
+                                    
+                                    <label for="endgoal">End Goal:</label>
+                                    <input type="text" id="endgoal" name="endgoal" required><br>
+                                    
+                                    <button id="popup-add" type="submit">Submit</button>
+                                    <button  id="cancel" onclick="closePopup()" >Cancel</button>
+                                  </form>
                     </section>
                     <section class="progress-chart">
                         <h2>Progress</h2>
