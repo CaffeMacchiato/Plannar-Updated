@@ -3,13 +3,19 @@
 <html>
   <head>
     <title>Plannar | Sign up</title>
-    <link rel="stylesheet" type="text/css" href="sign-up.css">
-    <link rel="stylesheet" type="text/css" href="default-nav.css">
+    <link rel="stylesheet" type="text/css" href="css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="css/DefaultNav.css">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+
+    <script type="module" src="js/SignUp.js"></script>
   </head>
 
   <body>
+    
     <div class="nav-bar">
       <div class="nav-bar-left">
         <button>Home</button>
@@ -30,11 +36,12 @@
 
       <div class="right-body">
         <div class="sign-up-box">
+          <div id="signup-message"></div>
           <h1 id="sign-up-text">Sign up</h1>
-          <input class="input-field" type="fname" placeholder="First Name">
-          <input class="input-field" type="lname" placeholder="Last Name">
-          <input class="input-field" type="email" placeholder="Email">
-          <input class="input-field" type="password" placeholder="Password">
+          <input id="first-name" class="input-field" type="text" placeholder="First Name">
+          <input id="last-name" class="input-field" type="text" placeholder="Last Name">
+          <input id="email" class="input-field" type="email" placeholder="Email">
+          <input id="password" class="input-field" type="password" placeholder="Password">
           <button id="sign-up-button">Sign up</button>
         </div>
         <div class="sign-in-link">
@@ -42,6 +49,7 @@
         </div>
       </div>
     </div>
-    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="js/SignUp.js"></script>
   </body>
 </html>
