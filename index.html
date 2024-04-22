@@ -10,9 +10,7 @@
 <body>
   <div class="nav-bar">
     <div class="nav-bar-left">
-      <button>Home</button>
-      <button>About</button>
-      <button>Contact</button>
+      <!-- add buttons -->
     </div>
     <div class="nav-bar-right">
       <button id="nav-sign-in-button">Sign in</button>
@@ -33,7 +31,10 @@
         <input class="input-field" type="password" placeholder="Password">
         <a id="forgot-button" href="reset-password.html">Forgot password?</a>
         <button id="sign-in-button">Sign in</button>
-        <button id="sign-in-google-button">Sign in with Google</button>
+        <div class="sign-in-button-wrapper" id="sign-in-google-button">
+          <img src="google.svg" alt="Google" class="sign-in-icon">
+          <p class="button-text">Sign in with Google</p>
+        </div>
       </div>
       <div class="sign-up-link">
         <p id="sign-up-text">New to Plannar? <a id="join-link" href="SignUp.html">Join now</a></p>
@@ -47,5 +48,22 @@
   <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js" defer></script>
   <script src="js/SignIn.js" defer></script>
   <script src="firebase-config.js"></script>
+  <script>
+    // Get a reference to the sign-in button
+    const signInButton = document.getElementById('sign-in-button');
+    const signInButtonGoogle = document.getElementById('sign-in-google-button');
+  
+    // Add an event listener to handle clicks on the button
+    signInButton.addEventListener('click', function() {
+      // Navigate to the desired URL
+      window.location.href = 'dashboard.html';
+    });
+
+    // Add an event listener to handle clicks on the button
+    signInButtonGoogle.addEventListener('click', function() {
+      // Navigate to the desired URL
+      window.location.href = 'dashboard.html';
+    });
+  </script>
 </body>
 </html>

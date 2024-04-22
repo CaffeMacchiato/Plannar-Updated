@@ -3,7 +3,8 @@
 <html>
     <head>
         <title>Dashboard</title>
-        <link rel="stylesheet" type="text/css" href="dashboard-menu.css">
+        <link rel="stylesheet" type="text/css" href="css/DashboardMenu.css">
+        <link rel="stylesheet" type="text/css" href="css/DashboardMenuContent.css">
     </head>
 
     <body>
@@ -58,11 +59,60 @@
 
             <!--Your content in this div-->
             <div class="dashboard">
-                <h1>Dashboard Menu</h1>
+                <div class="calendar-wrapper">
+                    <h1 class="title">Calendar</h1>
+                    <div class="calendar-content-wrapper">
+                        <div class="calendar-content">
+                            <p class="task-title">Study for Physics Exam</p>
+                            <p class="timeslot">8:30am - 10:30am</p>
+                            <a href="calendar.html"><button class="calendar-view-button">View</button></a>
+                        </div>
+    
+                        <div class="calendar-content">
+                            <p class="task-title">Finish Linear Algebra HW #5</p>
+                            <p class="timeslot">12:45pm - 2:00pm</p>
+                            <a href="calendar.html"><button class="calendar-view-button">View</button></a>
+                        </div>
+    
+                        <div class="calendar-content">
+                            <p class="task-title">Draft Software Eng. Project Proposal</p>
+                            <p class="timeslot">4:00pm - 6:15pm</p>
+                            <a href="calendar.html"><button class="calendar-view-button">View</button></a>
+                        </div>
+
+                        <div id="calendar-add-new">
+                            <a href="calendar.html"><button class="calendar-add-button">+</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub-divider">
+                    <div class="assignment-wrapper">
+                        <h1 class="title">Current Assignment</h1>
+                    </div>
+    
+                    <div class="performance-wrapper">
+                        <h1 class="title">Performance</h1>
+                        <div class="performance-content-wrapper">
+                            <div class="performance-content">
+                                <h3>Current Semester GPA</h3>
+                                <p>3.25</p>
+                            </div>
+                            
+                            <div class="performance-content">
+                                <h3>GPA Goal</h3>
+                                <p>3.6</p>
+                            </div>
+
+                            <div class="performance-content">
+                                <h3>Last Semester GPA</h3>
+                                <p>3.4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
-        
-
-        
     </body>
 </html>
