@@ -261,7 +261,7 @@ function createGraphs(){
         data: data
     };
         
-               chart = new Chart(
+               charts = new Chart(
                   document.getElementById('ProgressCharts'),
                   config
               );
