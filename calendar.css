@@ -167,6 +167,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 /* this changes the text color for the timeslot class to gray */
@@ -190,6 +191,21 @@ body {
     margin-right: 10px;
     border-radius: 5px;
     font-size: 14px;
+}
+
+/* this styles the "Delete" button outside each task box */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    left: -20%; /* this adjusts the "Delete" button to be outside AND TO THE LEFT of each task box BASED ON PERCENTAGES*/
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .task-content {
