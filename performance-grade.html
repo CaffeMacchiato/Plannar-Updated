@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Performance Tracker</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/DashboardMenu.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js" integrity="sha512-7DgGWBKHddtgZ9Cgu8aGfJXvgcVv4SWSESomRtghob4k4orCBUTSRQ4s5SaC2Rz+OptMqNk0aHHsaUBk6fzIXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="js/performanace.js"></script>
+        
     </head>
 
     <body>
@@ -77,47 +82,82 @@
                 </nav>
                 <main>   
                     <section class="desired-gpa">
-                            <h2>Desired Grade</h2>
-                            <div class="desired-content">
-                                <div id="grades-list">
-                                    <label for="semester">Semester</label>  
-                                    <label for="year">Year</label>
-                                    <label for="end-goal">End Goal</label>
-                                    <label for="Accomplishment">Accomplishment</label>
-                                </div>
-                                <button onclick="openPopup()">Add here</button>
-                            </div>
-                            <div class="popup" id ="popup">
-                                <form id="popup-content">
-                                  <label for="classname">Semester:</label>
-                                  <input type="text" id="classname" name="classname" required><br>
-                                  
-                                  <label for="year">Year:</label>
-                                  <input type="number" id="year" name="year" required><br>
-                                  
-                                  <label for="endgoal">End Goal:</label>
-                                  <input type="text" id="endgoal" name="endgoal" required><br>
-                                  
-                                  <button id="popup-add" type="submit">Submit</button>
-                                  <button  id="cancel" onclick="closePopup()" >Cancel</button>
-                                </form>
-                    </section>
-                    <section class="progress-chart">
-                        <h2>Progress</h2>
-                        <div id="progress-chart"><!-- Chart container --></div>              
-                    </section>
+                        <h2>Desired Grade</h2>
+                        <div id = "grade-entries"> 
+
+                        </div>
+                        <button onclick="openPopup()">Add here</button>
+                        <div class="popup" id ="popup">
+                            <form id="popup-content" onsubmit="saveFormData(event)">
+                                <label for="classname">Class:</label>
+                                <input type="text" id="classname" name="classname" required><br>
+                                
+                                <label for="year">Year:</label>
+                                <input type="number" id="year" step="1" min="2000" max=""name="year" required><br>
+                                
+                                <label for="endgoal">End Goal:</label>
+                                <select id="endgoal" name="endgoal" required>
+                                <option value="">Select Grade</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                                </select><br>
+                                
+                                <button id="popup-add" type="submit">Submit</button>
+                                <button type="button" id="cancel" onclick="closePopup()" >Cancel</button>
+                              </form>
+                        </div>
+                        
+                </section>
+
+                <section class="progress-chart">
+                    <h2>Progress</h2> 
+                    <div class="chart" style="width: 400px; height: 200px;">
+                        <canvas id="ProgressCharts"></canvas>      
+                    </div> 
+                    <button type="button" onclick="createGraphs();">show</button>
+                    <button type="button" onclick="resetGraphs();">Reset Graph</button>
+         
+ 
+                </section>
+
                     <section class="current-classes">
+                        <!--https://www.w3schools.com/html/html_tables.asp-->
                             <h2>Current Classes</h2>
-                            <table>
-                              <!-- Table headers -->
-                              <tr>
-                                <th>Class Name</th>
-                                <th>Credits</th>
-                                <th>Grade</th>
-                              </tr>
-        
-                              <!-- Dynamic rows to be filled with class data -->
-                            </table>                
+                            <div id="class-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Class Name</th>
+                                            <th>Credits</th>
+                                            <th>Grade</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="class-row">
+
+                                    </tbody>
+                                </table> 
+                            </div>
+                           
+                                <button type="button" id="addcurrent" onclick="openPopups()">Add Class</button>
+                            <div class="popup" id ="popups" >
+                                <form id="popup-contents" onsubmit="saveCurrent(event)">
+                                    <label for="classnames">Class Name</label>
+                                    <input type="text" id="classnames" name="classname" required><br>
+                                    
+                                    <label for="Credits">Credits</label>
+                                    <input type="number" id="Credits" step="1" min="0" max="4" name="Credits" required><br>
+                                    
+                                    <label for="Grade">Grade Score:</label>
+                                    <input type="number" id="Grade" step="0.1" min="0" max="100" name="Grade" required><br>
+                                    
+                                    <button type="submit">Submit</button>
+                                    <button  type="button" id="cancel" onclick="closePopups()" >Cancel</button>
+                                  </form>
+                            </div>
                     </section>
                     <section class="calculator">
                         <h2>Grade Calculator</h2>
@@ -151,7 +191,6 @@
         </div>
 
     
-        <script src="js/performanace.js"></script>
 
     </body>
 </html>
