@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Performance Tracker</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="dashboard-menu.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.js" integrity="sha512-7DgGWBKHddtgZ9Cgu8aGfJXvgcVv4SWSESomRtghob4k4orCBUTSRQ4s5SaC2Rz+OptMqNk0aHHsaUBk6fzIXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script src="js/performanace.js"></script>
+        
+
     </head>
 
     <body>
@@ -77,45 +83,76 @@
                 </nav>
                 <main>   
                     <section class="desired-gpa">
-                        <div id="grades-list">
                             <h2>Desired GPA</h2>
+                            <div id = "grade-entries"> 
 
-                            <div class="desired-content" id = "grade-entries">    
                             </div>
-                                <button onclick="openPopup()">Add here</button>
-                            </div>
+                            <button onclick="openPopup()">Add here</button>
                             <div class="popup" id ="popup">
                                 <form id="popup-content" onsubmit="saveFormData(event)">
                                     <label for="classname">Semester:</label>
                                     <input type="text" id="classname" name="classname" required><br>
                                     
                                     <label for="year">Year:</label>
-                                    <input type="number" id="year" name="year" required><br>
+                                    <input type="number" id="year" step="1" min="2000" max=""name="year" required><br>
                                     
                                     <label for="endgoal">End Goal:</label>
-                                    <input type="text" id="endgoal" name="endgoal" required><br>
+                                    <input type="number" id="endgoal" step="0.01" min="0" max="4" name="endgoal" required><br>
                                     
                                     <button id="popup-add" type="submit">Submit</button>
-                                    <button  id="cancel" onclick="closePopup()" >Cancel</button>
+                                    <button type="button" id="cancel" onclick="closePopup()" >Cancel</button>
                                   </form>
                             </div>
+                            
                     </section>
                     <section class="progress-chart">
-                        <h2>Progress</h2>
-                        <div id="progress-chart"><!-- Chart container --></div>              
+                        <h2>Progress</h2> 
+                        <div class="chart" style="width: 400px; height: 200px;">
+                            <canvas id="ProgressChart"></canvas>      
+                        </div> 
+                        <button type="button" onclick="createGraph();">show</button>
+                        <button type="button" onclick="resetGraphs();">Reset Graph</button>
+         
+                        <div class="dailyTips">
+                            <h2>Tips: </h2>
+                        </div>  
                     </section>
+
                     <section class="current-classes">
+                        <!--https://www.w3schools.com/html/html_tables.asp-->
                             <h2>Current Classes</h2>
-                            <table>
-                              <!-- Table headers -->
-                              <tr>
-                                <th>Class Name</th>
-                                <th>Credits</th>
-                                <th>Grade</th>
-                              </tr>
-        
-                              <!-- Dynamic rows to be filled with class data -->
-                            </table>                
+                            <div id="class-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Class Name</th>
+                                            <th>Credits</th>
+                                            <th>Grade</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="class-row">
+
+                                    </tbody>
+                                </table> 
+                            </div>
+                           
+                                <button type="button" id="addcurrent" onclick="openPopups()">Add Class</button>
+                            <div class="popup" id ="popups" >
+                                <form id="popup-contents" onsubmit="saveCurrent(event)">
+                                    <label for="classnames">Class Name</label>
+                                    <input type="text" id="classnames" name="classname" required><br>
+                                    
+                                    <label for="Credits">Credits</label>
+                                    <input type="number" id="Credits" step="1" min="0" max="4" name="Credits" required><br>
+                                    
+                                    <label for="Grade">Grade:</label>
+                                    <input type="text" id="Grade" name="Grade" required><br>
+                                    
+                                    <button type="submit">Submit</button>
+                                    <button  type="button" id="cancel" onclick="closePopups()" >Cancel</button>
+                                  </form>
+                            </div>
                     </section>
                     <section class="calculator">
                         <h2>GPA Calculator</h2>
@@ -134,7 +171,7 @@
                           <button type="button" id="addClass" onclick="addClassInput()"disabled>Add Class</button> <br>
                           
                           <label for="past-gpa">Past Cumulative GPA:</label>
-                          <input type="number" id="past-gpa" step="0.01" min="0" max="" placeholder="e.g., 3.5">
+                          <input type="number" id="past-gpa" step="0.01" min="0" max="4" placeholder="e.g., 3.5">
         
                           <button id="calculate" type="submit" onclick="calculateGPA()">Calculate my GPA</button>
                         </form>
@@ -146,10 +183,10 @@
                 </main>
             </div>
             
-        </div>
-
-    
-        <script src="js/performanace.js"></script>
+        </div> 
+        
+       <!--  <script src="js/performanace.js"></script> -->
+        
 
     </body>
 </html>
