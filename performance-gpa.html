@@ -82,40 +82,46 @@
                 </nav>
                 <main>   
                     <section class="desired-gpa">
-                            <h2>Desired GPA</h2>
-                            <div id = "grade-entries"> 
+                        <h2>Desired Grade</h2>
+                        <div id = "grade-entries"> 
 
-                            </div>
-                            <button onclick="openPopup()">Add here</button>
-                            <div class="popup" id ="popup">
-                                <form id="popup-content" onsubmit="saveFormData(event)">
-                                    <label for="classname">Semester:</label>
-                                    <input type="text" id="classname" name="classname" required><br>
-                                    
-                                    <label for="year">Year:</label>
-                                    <input type="number" id="year" step="1" min="2000" max=""name="year" required><br>
-                                    
-                                    <label for="endgoal">End Goal:</label>
-                                    <input type="number" id="endgoal" step="0.01" min="0" max="4" name="endgoal" required><br>
-                                    
-                                    <button id="popup-add" type="submit">Submit</button>
-                                    <button type="button" id="cancel" onclick="closePopup()" >Cancel</button>
-                                  </form>
-                            </div>
-                            
-                    </section>
-                    <section class="progress-chart">
-                        <h2>Progress</h2> 
-                        <div class="chart" style="width: 400px; height: 200px;">
-                            <canvas id="ProgressChart"></canvas>      
-                        </div> 
-                        <button type="button" onclick="createGraph();">show</button>
-                        <button type="button" onclick="resetGraphs();">Reset Graph</button>
+                        </div>
+                        <button onclick="openPopup()">Add here</button>
+                        <div class="popup" id ="popup">
+                            <form id="popup-content" onsubmit="saveFormData(event)">
+                                <label for="classname">Class:</label>
+                                <input type="text" id="classname" name="classname" required><br>
+                                
+                                <label for="year">Year:</label>
+                                <input type="number" id="year" step="1" min="2000" max=""name="year" required><br>
+                                
+                                <label for="endgoal">End Goal:</label>
+                                <select id="endgoal" name="endgoal" required>
+                                <option value="">Select Grade</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="F">F</option>
+                                </select><br>
+                                
+                                <button id="popup-add" type="submit">Submit</button>
+                                <button type="button" id="cancel" onclick="closePopup()" >Cancel</button>
+                              </form>
+                        </div>
+                        
+                </section>
+
+                <section class="progress-chart">
+                    <h2>Progress</h2> 
+                    <div class="chart" style="width: 400px; height: 200px;">
+                        <canvas id="ProgressCharts"></canvas>      
+                    </div> 
+                    <button type="button" onclick="createGraphs();">show</button>
+                    <button type="button" onclick="resetGraphs();">Reset Graph</button>
          
-                        <div class="dailyTips">
-                            <h2>Tips: </h2>
-                        </div>  
-                    </section>
+ 
+                </section>
 
                     <section class="current-classes">
                         <!--https://www.w3schools.com/html/html_tables.asp-->
@@ -145,8 +151,8 @@
                                     <label for="Credits">Credits</label>
                                     <input type="number" id="Credits" step="1" min="0" max="4" name="Credits" required><br>
                                     
-                                    <label for="Grade">Grade:</label>
-                                    <input type="text" id="Grade" name="Grade" required><br>
+                                    <label for="Grade">Grade Score:</label>
+                                    <input type="number" id="Grade" step="0.1" min="0" max="100" name="Grade" required><br>
                                     
                                     <button type="submit">Submit</button>
                                     <button  type="button" id="cancel" onclick="closePopups()" >Cancel</button>
@@ -154,7 +160,7 @@
                             </div>
                     </section>
                     <section class="calculator">
-                        <h2>GPA Calculator</h2>
+                        <h2>Grade Calculator</h2>
                         <form id="gpa-form">
                           <div id="class-inputs-container">
                             <!-- Class inputs will be dynamically added here -->
@@ -170,7 +176,7 @@
                           <button type="button" id="addClass" onclick="addClassInput()"disabled>Add Class</button> <br>
                           
                           <label for="past-gpa">Past Cumulative GPA:</label>
-                          <input type="number" id="past-gpa" step="0.01" min="0" max="4" placeholder="e.g., 3.5">
+                          <input type="number" id="past-gpa" step="0.01" min="0" max="" placeholder="e.g., 3.5">
         
                           <button id="calculate" type="submit" onclick="calculateGPA()">Calculate my GPA</button>
                         </form>
@@ -182,10 +188,9 @@
                 </main>
             </div>
             
-        </div> 
-        
-       <!--  <script src="js/performanace.js"></script> -->
-        
+        </div>
+
+    
 
     </body>
 </html>
