@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between; 
     height: 40px;
+    
 }
 .navbar{
     background-color:#21AD51;  
@@ -72,12 +73,16 @@ main{
 .popup label{
     display: inline;
 }
-.current-classes table {
+.current-classes table, .desired-gpa table {
     width: 100%;
     border-collapse: collapse;
   }
-  .current-classes th, .current-classes td {
+.current-classes th, .current-classes td ,.desired-gpa th , .desired-gpa td{
     text-align: left;
     padding: 8px;
     border-bottom: 1px solid #ddd;
   }
+
+.chart{
+    background-color: white;
+}
