@@ -149,7 +149,7 @@ function addClassInput() {
         classContainer.appendChild(table);
     }
 }
-
+//yes
 // Helper function to create the table for class inputs
 function createClassInputTable() {
     const table = document.createElement('table');
