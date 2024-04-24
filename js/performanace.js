@@ -1,6 +1,5 @@
 
 let chart = null;
-let charts = null;
 
 
 function openPopup() {
@@ -261,7 +260,7 @@ function createGraphs(){
         data: data
     };
         
-               charts = new Chart(
+               chart = new Chart(
                   document.getElementById('ProgressCharts'),
                   config
               );
@@ -271,9 +270,7 @@ function createGraphs(){
 function resetGraphs() {
     if (chart) {
         chart.destroy();
-        charts.destroy();
         chart = null;
-        charts = null;
     }
 
 }
