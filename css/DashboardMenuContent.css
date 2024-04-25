@@ -6,6 +6,26 @@
     color: grey;
 }
 
+.view-button {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50pt;
+    background-color: #21AD51;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    width: 10vw;
+    height: 3vh;
+}
+
+.view-button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50pt;
+    background-color: white;
+    color: #21AD51;
+    font-family: 'Inter', sans-serif;
+    width: 10vw;
+    height: 3vh;
+}
+
 .calendar-wrapper {
     display: flex;
     flex-direction: column;
@@ -81,6 +101,24 @@
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 50pt;
 }
+
+.assignment-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.assignment-content {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 50pt;
+    margin-bottom: 30px;
+    padding-left: 2vw;
+    width: 25vw;
+    height: 16vh;
+}
+
 
 .performance-wrapper {
     display: flex;
